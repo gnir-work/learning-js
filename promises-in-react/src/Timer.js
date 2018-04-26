@@ -103,11 +103,11 @@ class Timer extends Component {
                     Callback timer: {this.state.callBackTime ? this.state.callBackTime.toTimeString() :
                     <strong> Waiting for callback... </strong>}
                 </p>
-                <p className="call-back-time">
+                <p className="promise-time">
                     Promise timer: {this.state.promiseTime ? this.state.promiseTime.toTimeString() :
                     <strong> Waiting for callback... </strong>}
                 </p>
-                <p className="call-back-time">
+                <p className="await-async-time">
                     Promise timer with await: {this.state.awaitTime ? this.state.awaitTime.toTimeString() :
                     <strong> Waiting for callback... </strong>}
                 </p>
