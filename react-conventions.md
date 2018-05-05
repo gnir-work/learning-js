@@ -1,5 +1,5 @@
 # Conventions for writing react applications
-### Type Checking
+## Type Checking
 decide at the beginning of the project what type checker you will
 be using and use it for the rest of the project!
 
