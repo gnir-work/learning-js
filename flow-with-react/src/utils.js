@@ -10,6 +10,5 @@
  * @returns {string}
  */
 export function toCaps(text: string) {
-    "use strict";
     return `${text.toUpperCase()}!`;
 }
