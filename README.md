@@ -12,3 +12,8 @@ Currently this repo contains the following:
     * Flow: https://flow.org/en/
     * Add flow to a react project created with create-react-app: https://reactjs.org/docs/static-type-checking.html
     * Configuring WebStorm to work with flow: https://www.jetbrains.com/help/webstorm/using-the-flow-type-checker.html
+
+4. [Airbnb linter](airbnb-react-linting/.eslintrc.json) (Implemented inside a react app)
+    * Airbnb conventions: https://github.com/airbnb/javascript
+    * EsLinter preset: https://www.npmjs.com/package/eslint-config-airbnb
+    * Configuring WebStorm to work with eslint: https://www.jetbrains.com/help/webstorm/eslint.html
