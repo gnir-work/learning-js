@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "airbnb"],
+  "rules": {
+    "react/jsx-no-bind" : [2, {
+      "ignoreRefs": false,
+      "allowArrowFunctions": false,
+      "allowFunctions": false,
+      "allowBind": false
+    }]
+  },
+  "parser": "babel-eslint"
+}
