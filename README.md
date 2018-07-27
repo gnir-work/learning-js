@@ -19,7 +19,7 @@ Currently this repo contains the following:
     * Configuring WebStorm to work with eslint: https://www.jetbrains.com/help/webstorm/eslint.html
 
 5. [React New Window Gallery](react-new-window-gallery/src/App.js) (Implemented inside a react app)
-    * Contains a basic express server
+    * Contains a basic express server which serves the images
     * Contains a basic gallery implement via [react-slick](https://github.com/akiran/react-slick)
     * The gallery has a preview for the current image that is shown in a new window!
       This feature is implement using [react-new-window](https://github.com/rmariuzzo/react-new-window)
