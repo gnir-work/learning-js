@@ -1,11 +1,12 @@
 ## React gallery with big image preview
 ### Introduction
-In the project i implemented a react gallery using [react-slick](https://github.com/akiran/react-slick).
-However the main feature isn't the gallery but the image preview that is located in a popup! This is useful 
-if you want to show the biggest preview possible of the current image.
+In the project I implemented a react gallery using [react-slick](https://github.com/akiran/react-slick).
 
+However the main feature isn't the gallery but the image preview that is located in a __popup__. This is useful 
+if you want to show the biggest preview possible of the current image.
 The popup was implemented using [react-new-window](https://github.com/rmariuzzo/react-new-window) which is an awesome
 react wrap over the [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) api.
+Needless to say the image in the popup updates when you scroll through the gallery.
 
 ### Running the project
 In order to run the project you will need to do several things.
