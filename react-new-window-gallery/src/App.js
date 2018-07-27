@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import NewWindow from 'react-new-window'
 
 import logo from './logo.svg';
 import './App.css';
@@ -14,7 +15,7 @@ class App extends Component {
   componentDidMount() {
     axios.get('/gallery/images').then(res => res.data).then(data => {
       this.setState({
-        images: data
+        images: data.map(image => `http:\\\\localhost:5000\\media\\${image}`)
       })
     })
   }
@@ -35,9 +36,14 @@ class App extends Component {
           <h1 className="App-title">My Cool Gallery</h1>
         </header>
         <SlickCarousel onImageSelect={this.handleImageSelect} images={images}/>
-        <div className="big-image-container">
-          <img src={images[currentImageIndex]} alt="big-image-preview" className="big-image" />
-        </div>
+        <NewWindow name="Big Image View" title="Big Image View" center="screen" features={{
+          width: window.width,
+          height: window.height,
+        }}>
+          <div className="big-image-container">
+            <img src={images[currentImageIndex]} alt="big-image-preview" className="big-image" />
+          </div>
+        </NewWindow>
       </div>
     );
   }

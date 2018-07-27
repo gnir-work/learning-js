@@ -8,8 +8,7 @@ const MEDIA_DIRECTORY = 'media'
 const app = express()
 
 function getGalleryImagesPaths() {
-  const imagesNames =  fs.readdirSync(path.join(__dirname, PUBLIC_DIRECTORY, MEDIA_DIRECTORY));
-  return imagesNames.map(imageName => path.join(MEDIA_DIRECTORY, imageName));
+  return fs.readdirSync(path.join(__dirname, PUBLIC_DIRECTORY, MEDIA_DIRECTORY));
 }
 
 app.use(express.static(PUBLIC_DIRECTORY))
