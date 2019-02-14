@@ -1,26 +1,40 @@
 import Layout from '../components/MyLayout.js'
-import fetch from 'isomorphic-unfetch'
+import {withRouter} from 'next/router'
+import Markdown from 'react-markdown'
 
+export default withRouter((props) => (
+    <Layout>
+        <h1>{props.router.query.title}</h1>
+        <div className="markdown">
+            <Markdown source={`
+This is our blog post.
+Yes. We can have a [link](/link).
+And we can have a title as well.
 
-const Post = (props) => {
-    console.log('hello');
-    return (<Layout>
-        <h1>{props.show.name}</h1>
-        <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
-        <img src={props.show.image.medium}/>
-    </Layout>)
-}
+### This is a title
 
-Post.getInitialProps = async function (context) {
-    const { id } = context.query;
-    // await timeout(2000);
-    console.log(id);
-    const res = await fetch(`https://api.tvmaze.com/shows/${id}`)
-    const show = await res.json()
+And here's the content.
+     `}/>
+        </div>
+        <style jsx global>{`
+     .markdown {
+       font-family: 'Arial';
+     }
 
-    console.log(`Fetched show: ${show.name}`)
+     .markdown a {
+       text-decoration: none;
+       color: blue;
+     }
 
-    return { show }
-}
+     .markdown a:hover {
+       opacity: 0.6;
+     }
 
-export default Post
+     .markdown h3 {
+       margin: 0;
+       padding: 0;
+       text-transform: uppercase;
+     }
+  `}</style>
+    </Layout>
+))
