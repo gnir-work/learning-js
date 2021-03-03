@@ -29,5 +29,5 @@ Currently this repo contains the following:
       This feature is implement using [react-new-window](https://github.com/rmariuzzo/react-new-window)
 
 6. [Javascript closures and scopes](js-closures) (Implemented as pure js files)
-    - [basic_closure_scoping.js](js-closures/basic_closure_scoping.js) - A very basic closure example with explanations up to scoping and closure level.
+    - [basic_closure_scoping.js](js-closures/basic_closure_example.js) - A very basic closure example with explanations up to scoping and closure level.
     - [lexical_environments_example.js](js-closures/lexical_environments_example.js) - A more complex explanation referring to lexical environments and scope chains.
